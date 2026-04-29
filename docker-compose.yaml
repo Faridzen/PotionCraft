@@ -3,13 +3,11 @@ version: '3.8'
 services:
   api:
     image: faridzen1/potioncraft:api-latest
-    build: ./api
     ports:
       - "8081:80"
 
   frontend:
     image: faridzen1/potioncraft:frontend-latest
-    build: ./frontend
     depends_on:
       - api
     ports:
