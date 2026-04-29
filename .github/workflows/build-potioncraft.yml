@@ -23,7 +23,7 @@ jobs:
 
       - name: Build and Push
         run : |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/wordsmith:${{ matrix.service }}-latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/potioncraft:${{ matrix.service }}-latest ./${{ matrix.service }}
             
-          docker push ${{ secrets.DOCKER_USERNAME }}/wordsmith:${{ matrix.service }}-latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/potioncraft:${{ matrix.service }}-latest ./${{ matrix.service }}
           
